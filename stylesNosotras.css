@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;  /*para q los elementos se muestren d forma horizontal*/
+    background-color: rgba(220, 220, 220);
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.logo{
+    display: flex;
+    height: 75;
+    font-family: 'Aboreto', cursive;
+    letter-spacing: 6px;
+    align-items: center; /*centro todo lo q esta dentro de .logo osea centro la imagen y el titulo*/
+}
+
+.logo img{
+    height: 40px;
+    width: 50px;
+    margin-right: 20px; /*le pongo el margen de 15 px para separar del titulo */
+    margin-left: 15px;
+}
+
+
+
+a{
+    text-decoration: none;  /*para scarle el subrayado q tienen los links*/
+    color: black;
+}
+
+nav a{
+    position: relative;
+    display: inline-block;
+    font-family: 'Gupter', serif;
+    font-size: 25px;
+    padding: 10px 15px;
+    border-bottom: 4px transparent;
+    transition: 0.5s;
+}
+
+nav a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: grey;
+    transition: 0.5s;
+}
+
+
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: grey;
+    transition: 0.5s;
+    position: absolute;
+    will-change: width;
+}
+
+
+nav a:hover::after{  /*para cuando le pasamos el cursor por encima*/
+color: grey;
+border-bottom: 4px solid;
+width: 100%;
+right: 0;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+
+.container-todo{
+    
+width: 100%;
+max-width: 1000px;
+padding: 60px;
+margin: auto;
+margin-top: 50px;
+border-top: 5px solid rgb(202, 201, 201);
+}
+
+.titulo{
+    font-size: 30px;
+    margin-bottom: 60px;
+    font-family: 'Aboreto', cursive;
+    color:  gray;
+}
+
+.container-todo img{
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.container-todo p{
+    font-size: 18px;
+    font-weight: 200;
+    font-family: 'Gupter', serif;
+    margin-bottom: 20px;
+}
+
+
+/*--------------------------------------Media Queries-------------------------------*/
+
+
+@media screen and (max-width:768px) {  /*medida para tablet*/
+
+    header{
+        display: block;  /*para q los elementos se muestren d forma horizontal*/
+        background-color: rgba(220, 220, 220);
+        height: 150px;
+        justify-content: space-between;
+        align-items: center;
+        
+    
+    }
+    
+    .nav-link{
+        background:rgba(220, 220, 220);
+        padding: 10px 30px;
+        display: block;  
+        text-align: center;     
+    }
+       
+}
+
+@media screen and (max-width:576px) {  /*medida para celular*/
+
+    
+header{
+
+    display: block;  /*para q los elementos se muestren d forma horizontal*/
+    background-color: rgba(220, 220, 220);
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+    .nav-link{
+        background:rgba(220, 220, 220);
+        padding: 10px 30px;
+        display: block;
+        text-align: center;       
+    }
+
+
+
+
+
+}

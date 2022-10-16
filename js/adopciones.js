@@ -25,7 +25,6 @@ Otras funciones/metodos que se implementan (push, filter, length):
 
 -Se puede conocer la cantidad total de gatos adoptados y cuales son al final 
 -Se puede conocer la cantidad total de gatos que quedaron sin adoptar todavia y cuales son al final
--Se puede conocer todos los nombres de los socios que adoptaron recientemente. 
 
 */
 

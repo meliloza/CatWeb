@@ -85,8 +85,8 @@ right: 0;
 
 
 .container{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 
 }
 
@@ -121,15 +121,9 @@ input,textarea{
     
 }
 
-#boton{
-    background: rgb(222, 222, 222);
-    padding: 15px;
+p{
+    text-align: center;
 }
-
-#boton:hover{
-    cursor: pointer;
-}
-
 /*--------------------------------------Footer-------------------------------*/
 
 

@@ -1,133 +1,84 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/*---------------------------------Header-----------------------------------------------------------------------------*/
-
-header{
-    display: flex;  /*para q los elementos se muestren d forma horizontal*/
-    background-color: rgba(220, 220, 220);
-    height: 150px;
-    justify-content: space-between;
-    align-items: center;
-    
-
-}
-
-.logo{
-    display: flex;
-    height: 75;
-    font-family: 'Aboreto', cursive;
-    letter-spacing: 6px;
-    align-items: center; /*centro todo lo q esta dentro de .logo osea centro la imagen y el titulo*/
-}
-
-.logo img{
-    height: 40px;
-    width: 50px;
-    margin-right: 20px; /*le pongo el margen de 15 px para separar del titulo */
-    margin-left: 15px;
-}
-
-a{
-    text-decoration: none;  /*para scarle el subrayado q tienen los links*/
-    color: black;
-}
-
-nav a{
-    position: relative;
-    display: inline-block;
+.contenedorTabla{
+    width: 600px;
+    margin: 50px auto;
     font-family: 'Gupter', serif;
-    font-size: 25px;
-    padding: 10px 15px;
-    border-bottom: 4px transparent;
-    transition: 0.5s;
-}
-
-nav a::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: grey;
-    transition: 0.5s;
-}
-
-
-nav a::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 1px;
-    background: grey;
-    transition: 0.5s;
-    position: absolute;
-    will-change: width;
-}
-
-
-nav a:hover::after{  /*para cuando le pasamos el cursor por encima*/
-color: grey;
-border-bottom: 4px solid;
-width: 100%;
-right: 0;
-}
-
-
-
-/*----------------------------------------------estilos del formulario contacto-----------------------------------------*/
-
-
-.container{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    font-size: 18px;
 
 }
 
-
-form{
-    font-size: 20px;
-    margin: auto;
-    max-width: 480px;
-    padding: 20px 20px;
-    color: rgb(129, 128, 128);
-    box-sizing: border-box;
-    font-family: 'Gupter', serif;
-    box-shadow: 0 0 20px #000000b3;
-    font-weight: 500;
-   
-}
-
-h1{
-    text-align: center;
-    color: dimgrey;
-    font-weight: 300;
-    margin-bottom: 20px;
-    font-family: 'Gupter', serif;
-}
-
-input,textarea{
+#ListarDonantes{
+    background-color: #dbdbdb;
+    border-collapse: collapse;
+    text-align: left;
     width: 100%;
-    margin-bottom: 20px;
-    font-size: 15px;
-    border: none;
-    color:rgb(129, 128, 128); ;
+}
+
+.contenedorTabla #ListarDonantes th{
+    padding: 20px;
+}
+
+.contenedorTabla #ListarDonantes td{
+    padding: 20px;
+}
+
+.contenedorTabla #ListarDonantes thead{
+    background-color: #5A5A5A;
+    border-bottom: solid 5px #ffffff;
+    color: white;
+}
+
+.contenedorTabla #ListarDonantes tr:nth-child(even){
+    background-color: ghostwhite; 
+}
+
+.contenedorTabla #ListarDonantes tr:hover td{
+    background-color: #708090; 
+    color: white;
+}
+
+
+.Formulario{
+    width: 600px;
+    padding: 20px 20px;
+    margin: 50px auto;
+    font-family: 'Gupter', serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    text-align: left;
+    color: rgb(129, 128, 128);
+    box-shadow: 0 0 20px #000000b3;
     
 }
 
-#boton{
-    background: rgb(222, 222, 222);
-    padding: 15px;
+input{
+    padding:  8px 12px;
+    margin-left: 40px;
+    font-size: 15px;
 }
 
-#boton:hover{
+button{
+    padding:  8px 12px;
+    margin-left: 40px;
+    font-family: 'Gupter', serif;
+    font-size: 17px;
+    background: rgb(222, 222, 222);
+    border: none;
+    
+
+}
+
+button:hover{
     cursor: pointer;
+}
+
+.TituloForm{
+    padding: 20px 20px ;
+
+}
+
+.tituloTabla{
+    margin: 50px auto;
+
 }
 
 /*--------------------------------------Footer-------------------------------*/
@@ -245,43 +196,10 @@ footer .social-link:nth-of-type(3){/*Nth of type inside that container*/
     background-image: url(Multimedia/linkedIn.png);
 }
 
+/*--------------------------------------Media Queries-------------------------------*/
 
 
-/*------------------------------Media queries------------------------------------------------------------------*/
-
-@media screen and (max-width:768px) { /*medida para tablet */
-
-    .container{
-        padding-top: 130px;
-    }
-
-
-    header{
-        display: block;  /*para q los elementos se muestren d forma horizontal*/
-        background-color: rgba(220, 220, 220);
-        height: 150px;
-        justify-content: space-between;
-        align-items: center;
-        
-    
-    }
-    
-        .nav-link{
-            background:rgba(220, 220, 220);
-            padding: 10px 30px;
-            display: block;
-            text-align: center;       
-        }
-    
-
-
-}
-
-@media screen and (max-width:576px){
-
-    .container{
-        padding-top: 130px;
-    }
+@media screen and (max-width:768px) {  /*medida para tablet*/
 
     header{
         display: block;  /*para q los elementos se muestren d forma horizontal*/
@@ -296,12 +214,45 @@ footer .social-link:nth-of-type(3){/*Nth of type inside that container*/
     .nav-link{
         background:rgba(220, 220, 220);
         padding: 10px 30px;
-        display: block;
-        text-align: center;       
+        display: block;  
+        text-align: center;     
     }
+
+    .container-todo{
+        padding-top: 120px;
+    }
+
+
+       
+}
+
+@media screen and (max-width:576px) {  /*medida para celular*/
+
+    
+header{
+
+    display: block;  /*para q los elementos se muestren d forma horizontal*/
+    background-color: rgba(220, 220, 220);
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
     
 
 }
+
+    .nav-link{
+        background:rgba(220, 220, 220);
+        padding: 10px 30px;
+        display: block;
+        text-align: center;       
+    }
+
+    .container-todo{
+        padding-top: 120px;
+    }
+
+}
+
 
 @media (max-width: 768px){
     
@@ -345,3 +296,5 @@ footer .social-link:nth-of-type(3){/*Nth of type inside that container*/
         border-bottom: none;
     }
 }
+
+

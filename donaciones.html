@@ -12,9 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Gupter:wght@400;500;700&family=Zen+Loop&display=swap" rel="stylesheet">
 
-    <title>Contacto</title>
+    <link rel="stylesheet" href="stylesDonaciones.css">
+    <title>Donaciones</title>
 </head>
-<body>
+<body onload="mostrarSocios();">
         
 
     <header>
@@ -33,7 +34,137 @@
 
 </header>
 
-<script src="js\donaciones.js"></script>
+<!--<script src="js\donaciones.js"></script>-->
+
+
+<!----------------------------TABLA DE SOCIOS----------------------->
+
+<br>
+<br>
+<br>
+
+<div class="TituloForm">
+<h1 class="titulo"> Sumáte y sé parte de esta hermosa comunidad!</h1>
+</div>
+
+<div class="Formulario">
+
+<table id="form">
+    <tr>
+        <th>Nombre Socio</th>
+        <td><input type="text" id="txtNombre" placeholder="Nombre Usuario"> </td>
+    </tr>
+    
+    <tr>
+        <th>Donacion Realizada</th>
+        <td><input type="text" id="txtDonacion" placeholder="Monto"> </td>
+    </tr>
+    
+    <tr>
+        <th>Adopto </th>
+        <td><input type="text" id="txtAdoptoSiNo" placeholder="Si/No"> </td>
+    </tr>
+    
+    <tr>
+        <th>Gato Adoptado</th>
+        <td><input type="text" id="txtAdoptado" placeholder="Nombre Gato"> </td>
+    </tr>
+    
+    <tr>
+        <th></th>
+        <td><button onclick="agregarSocio();"> Enviar Informacion </button></td>
+    </tr>
+    </table>
+
+
+
+
+
+</div>
+
+
+<br>
+<br>
+
+
+
+<div class="tituloTabla">
+<h1 class="titulo"> Donaciones realizadas por nuestros socios...</h1>
+</div>
+
+
+<div class="contenedorTabla">
+
+    <table id="ListarDonantes">
+        <tr> 
+            <thead> <!--esto es como el encabezado digamos-->
+                <th>Socio</th>
+                <th>Donacion</th>
+                <th>Adopto</th>
+                <th>Gato Adoptado</th>
+            </thead>
+        </tr>
+    
+        <tbody id="tbDatos">
+    
+    
+    
+        </tbody>
+    
+    </table>
+
+</div>
+    
+    
+    
+    
+    <!----------------------------ARCHIVO JAVASCRIPT----------------------->
+
+
+<script src="js\donacionesTabla.js"></script>
+
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-contenido-container">
+            <h3 class="website-logo">C A T W E B</h3>
+            <span class="footer-info">Bs As, Argentina</span>
+            <span class="footer-info">fundacioncw@catweb.com</span>
+        </div>
+        <div class="footer-menus">
+            <div class="footer-contenido-container">
+                <span class="menu-title">Información</span>
+                <a href="" class="menu-item-footer">Soporte</a>
+                <a href="" class="menu-item-footer">Seguridad</a>
+                <a href="" class="menu-item-footer">Comunidad</a>
+            </div>
+            <div class="footer-contenido-container">
+                <span class="menu-title">legal</span>
+                <a href="" class="menu-item-footer">Politica de privacidad</a>
+                <a href="" class="menu-item-footer">Acuerdos Legales</a>
+                <a href="" class="menu-item-footer">Cookies</a>
+            </div>
+        </div>
+        
+        <div class="footer-content-container">
+            <span class="menu-title">Seguinos</span>
+            <div class="social-container">
+                <a href="" class="social-link"></a>
+                <a href="" class="social-link"></a>
+                <a href="" class="social-link"></a>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-container">
+        <span class="copyright">Copyright 2022, catweb.com.ar. Todos los derechos reservados.</span>
+    </div>
+</footer>
+
+
+
 
 
 

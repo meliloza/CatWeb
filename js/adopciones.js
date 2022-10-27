@@ -81,6 +81,7 @@ for (let i=0; i<gatos.length; i++){
 }
 }
 
+
 //Almacena localmente todos los gatos adoptados y no adoptamos actualizados
 const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
 guardarLocal("listaGatos", JSON.stringify(gatos));
@@ -95,6 +96,8 @@ if(rta=="si"|| rta=="Si"||rta=="SI"){
     const gatosNoAdoptados= gatos.filter( gato=> gato.adoptado==false);
     console.log("Los gatos No adoptados son los siguientes: ");
     console.log(gatosNoAdoptados);
+
+
     console.log("La cantidad total de gatos no adoptados son: " + gatosNoAdoptados.length);
 }
 
@@ -104,10 +107,28 @@ alert("Gracias por elegirnos, te esperamos en la proxima adopcion! :)")
 
 
 
-
-
-
-
-
-
-
+let btnGet = document.querySelector('button');
+let myTable = document.querySelector('#table');
+let headers = ['ID', 'Gato', 'Estado Adopcion'];
+btnGet.addEventListener('click', () => {
+    let table = document.createElement('table');
+    let headerRow = document.createElement('tr');
+    headers.forEach(headerText => {
+        let header = document.createElement('th');
+        let textNode = document.createTextNode(headerText);
+        header.appendChild(textNode);
+        headerRow.appendChild(header);
+    });
+    table.appendChild(headerRow);
+    gatos.forEach(emp => {
+        let row = document.createElement('tr');
+        Object.values(emp).forEach(text => {
+            let cell = document.createElement('td');
+            let textNode = document.createTextNode(text);
+            cell.appendChild(textNode);
+            row.appendChild(cell);
+        })
+        table.appendChild(row);
+    });
+    myTable.appendChild(table);
+});
